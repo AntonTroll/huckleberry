@@ -1,12 +1,94 @@
 * {
-  box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
 }
 
 html,
 body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    --8px: 0.5rem;
+    --16px: 1rem;
+    --24px: 1.5rem;
+    --32px: 2rem;
+    --48px: 3rem;
+    --64px: 4rem;
+    --96px: 6rem;
+    --128px: 8rem;
+
+    --font-size-normal: 1rem;
+    --font-size-medium: 1.25rem;
+    --font-size-large: 1.5rem;
+    --font-size-huge: 2rem;
+
+    --primary: hsl(160deg, 100%, 30%);
+    --secondary-lighter: hsl(45deg, 100%, 50%);
+    --secondary-darker: hsl(45deg, 100%, 40%);
+    --black: hsl(0deg, 0%, 0%);
+    --grey-very-dark: hsl(0deg, 0%, 10%);
+    --grey-dark: hsl(0deg, 0%, 30%);
+    --grey-medium: hsl(0deg, 0%, 40%);
+    --grey-light: hsl(0deg, 0%, 60%);
+    --white: hsl(0deg, 0%, 100%);
+
+    height: 100%;
 }
 
 /* Add styles here! */
+header {
+    border-bottom: var(--8px) solid var(--grey-light);
+    height: 50%;
+    padding-top: var(--96px);
+}
+
+main {
+    background-color: var(--grey-medium);
+    height: 50%;
+    padding-top: var(--64px);
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+.max-width-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+}
+
+.title {
+    margin-bottom: var(--64px);
+}
+
+p {
+    font-size: var(--font-size-medium);
+    margin-block: var(--24px);
+}
+
+strong {
+    color: var(--primary);
+}
+
+.intro-chunk {
+    padding-inline: var(--24px);
+}
+
+.intro-chunk p {
+    max-width: 415px;
+}
+
+.card {
+    background-color: var(--white);
+    border-bottom: var(--8px) solid var(--grey-light);
+    padding-inline: var(--24px);
+    padding-top: var(--8px);
+}
+
+.indented-heading {
+    background-color: var(--secondary-lighter);
+    border-bottom: var(--8px) solid var(--secondary-darker);
+    padding: var(--16px) var(--32px);
+    max-width: fit-content;
+    margin-left: calc((var(--24px) + var(--8px)) * -1)
+}
